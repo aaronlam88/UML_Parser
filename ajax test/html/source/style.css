@@ -1,0 +1,34 @@
+/*reference:https://css-tricks.com/password-strength-meter/*/
+meter {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  /*margin: 0 auto 1em;*/
+  /*width: 100%;*/
+  width: 245px;
+  height: 10px;
+
+  /* Applicable only to Firefox */
+  background: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Webkit based browsers */
+/
+meter[value="3"]::-webkit-meter-optimum-value { background: red; }
+meter[value="10"]::-webkit-meter-optimum-value { background: #3cff33; }
+meter[value="6"]::-webkit-meter-optimum-value { background: orange; }
+meter[value="15"]::-webkit-meter-optimum-value { background: green; }
+
+/* Gecko based browsers */
+meter[value="3"]::-moz-meter-bar { background: red; }
+meter[value="10"]::-moz-meter-bar { background: #3cff33; }
+meter[value="6"]::-moz-meter-bar { background: orange; }
+meter[value="15"]::-moz-meter-bar { background: green; }
